@@ -41,6 +41,9 @@ class UserController extends Controller
         return response([
             "message" => "Le mot de passe n'est pas correct"
         ],401);
+      
+        $token = $user->createTokn('token')->plainTextToken;
         return $user;
+       // return $token;
     }
 }

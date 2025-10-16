@@ -17,4 +17,4 @@ Route::get('/',function(){
 Route::post('/register',[UserController::class,'register']);
 Route::post('/login',[UserController::class,'login']);
 
-Route::get("/modules",[ModuleController::class,'index']);
+Route::get("/modules",[ModuleController::class,'index'])->middleware('is_active');

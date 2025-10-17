@@ -18,7 +18,6 @@ import { useModuleStore } from '@/stores/moduleStore'
 const moduleStore = useModuleStore()
 const router = useRouter()
 
-// Automatically use the store's state
 const modules = computed(() => moduleStore.modules)
 
 onMounted(async () => {
